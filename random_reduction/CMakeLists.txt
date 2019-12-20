@@ -1,0 +1,11 @@
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_COMPILER mpic++)
+set(CMAKE_C_COMPILER mpicc)
+
+find_package(MPI REQUIRED)
+include_directories(${MPI_INNCLUDE_PATH})
+add_executable(reduction Reduction.cpp)
+add_executable(reduction-multi Reduction-multi.cpp)
+add_executable(validation Validation_mpi.cpp)
+target_link_libraries(reduction ${MPI_LIBRARIES})
+target_link_libraries(reduction-multi ${MPI_LIBRARIES})

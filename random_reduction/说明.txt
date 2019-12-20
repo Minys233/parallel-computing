@@ -1,0 +1,3 @@
+读懂并将串行算法Reduction.cpp改成mpi并行。
+用Random_matrix.py生成随机矩阵，
+用Validationg_mpi.cpp验证结果。
